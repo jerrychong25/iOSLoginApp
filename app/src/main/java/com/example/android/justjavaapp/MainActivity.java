@@ -22,7 +22,7 @@ import java.text.NumberFormat;
  */
 public class MainActivity extends AppCompatActivity {
 
-    int numberOfCoffees = 2;
+    int quantity = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,20 +34,17 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+        displayPrice(quantity * 5);
     }
 
     public void increment(View view) {
-        numberOfCoffees += 1;
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+        quantity += 1;
+        display(quantity);
     }
 
     public void decrement(View view) {
-        numberOfCoffees -= 1;
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+        quantity -= 1;
+        display(quantity);
     }
 
     /**
