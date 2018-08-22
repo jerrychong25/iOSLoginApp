@@ -108,15 +108,37 @@ public class MainActivity extends AppCompatActivity {
      *
      */
     private int calculatePrice(int quantity) {
-        return (quantity * 5);
+        int Price = 5;
+
+        if(isWhippedCream == true)
+        {
+            Price += 1;
+        }
+
+        if(isChocolate == true)
+        {
+            Price += 2;
+        }
+
+        return (quantity * Price);
     }
 
     public void increment(View view) {
+        if(quantity==100)
+        {
+            return;
+        }
+
         quantity += 1;
         displayQuantity(quantity);
     }
 
     public void decrement(View view) {
+        if(quantity==1)
+        {
+            return;
+        }
+
         quantity -= 1;
         displayQuantity(quantity);
     }
