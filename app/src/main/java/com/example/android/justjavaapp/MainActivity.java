@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void createOrderSummary(int numberOrder) {
         int price = calculatePrice(numberOrder);
-        String priceMessage = "";
-        priceMessage = "Name: " + "Jerry Chong";
-        priceMessage = priceMessage + "\nQuantity: " + numberOrder;
-        priceMessage = priceMessage + "\nTotal: $" + price;
-        priceMessage = priceMessage + "\nThank you!";
-        displayPriceMessage(priceMessage);
+        String orderMessage = "";
+        orderMessage = "Name: " + "Jerry Chong";
+        orderMessage = orderMessage + "\nQuantity: " + numberOrder;
+        orderMessage = orderMessage + "\nTotal: $" + price;
+        orderMessage = orderMessage + "\nThank you!";
+        displayOrderSummaryMessage(orderMessage);
     }
 
     /**
@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given text on the screen.
      */
-    private void displayPriceMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+    private void displayOrderSummaryMessage(String message) {
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(message);
     }
 }
