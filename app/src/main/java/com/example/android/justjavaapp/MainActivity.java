@@ -8,6 +8,8 @@
 
 package com.example.android.justjavaapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -101,6 +103,18 @@ public class MainActivity extends AppCompatActivity {
         orderMessage = orderMessage + "\nTotal: $" + price;
         orderMessage = orderMessage + "\nThank you!";
         displayOrderSummaryMessage(orderMessage);
+
+        composeEmail("Just Java Order For "+ name, orderMessage);
+    }
+
+    private void composeEmail(String subject, String content) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, content);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     /**
