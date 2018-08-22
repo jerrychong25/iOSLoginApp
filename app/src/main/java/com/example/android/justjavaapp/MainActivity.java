@@ -102,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
         orderMessage = orderMessage + "\nQuantity: " + numberOrder;
         orderMessage = orderMessage + "\nTotal: $" + price;
         orderMessage = orderMessage + "\nThank you!";
-        displayOrderSummaryMessage(orderMessage);
 
         composeEmail("Just Java Order For "+ name, orderMessage);
     }
@@ -163,13 +162,5 @@ public class MainActivity extends AppCompatActivity {
     private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
-    }
-
-    /**
-     * This method displays the given text on the screen.
-     */
-    private void displayOrderSummaryMessage(String message) {
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderSummaryTextView.setText(message);
     }
 }
