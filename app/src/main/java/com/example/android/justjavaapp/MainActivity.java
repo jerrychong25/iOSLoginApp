@@ -34,10 +34,25 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = quantity * 5;
-        String priceMessage = "Total: $" + price;
+        createOrderSummary(quantity);
+    }
+
+    private void createOrderSummary(int numberOrder) {
+        int price = calculatePrice(numberOrder);
+        String priceMessage = "";
+        priceMessage = "Name: " + "Jerry Chong";
+        priceMessage = priceMessage + "\nQuantity: " + numberOrder;
+        priceMessage = priceMessage + "\nTotal: $" + price;
         priceMessage = priceMessage + "\nThank you!";
         displayPriceMessage(priceMessage);
+    }
+
+    /**
+     * Calculates the price of the order.
+     *
+     */
+    private int calculatePrice(int quantity) {
+        return (quantity * 5);
     }
 
     public void increment(View view) {
@@ -56,14 +71,6 @@ public class MainActivity extends AppCompatActivity {
     private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
-    }
-
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
     /**
