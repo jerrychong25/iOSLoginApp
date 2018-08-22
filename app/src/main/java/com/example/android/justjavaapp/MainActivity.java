@@ -79,31 +79,31 @@ public class MainActivity extends AppCompatActivity {
         EditText etname = (EditText) findViewById(R.id.edit_text_name);
         String name = etname.getText().toString();
 
-        orderMessage = "Name: " + name;
+        orderMessage = getString(R.string.order_summary_name, name);
 
         if(isWhippedCream == true)
         {
-            orderMessage = orderMessage + "\nAdd Whipped Cream: Yes";
+            orderMessage = orderMessage + "\n" + getString(R.string.add) + getString(R.string.whipped_cream) + ": Yes";
         }
         else if(isWhippedCream == false)
         {
-            orderMessage = orderMessage + "\nAdd Whipped Cream: No";
+            orderMessage = orderMessage + "\n" + getString(R.string.add) + getString(R.string.whipped_cream) + ": No";
         }
 
         if(isChocolate == true)
         {
-            orderMessage = orderMessage + "\nAdd Chocolate: Yes";
+            orderMessage = orderMessage + "\n" + getString(R.string.add) + getString(R.string.chocolate) + ": Yes";
         }
         else if(isChocolate == false)
         {
-            orderMessage = orderMessage + "\nAdd Chocolate: No";
+            orderMessage = orderMessage + "\n" + getString(R.string.add) + getString(R.string.chocolate) + ": No";
         }
 
-        orderMessage = orderMessage + "\nQuantity: " + numberOrder;
-        orderMessage = orderMessage + "\nTotal: $" + price;
-        orderMessage = orderMessage + "\nThank you!";
+        orderMessage = orderMessage + "\n" + getString(R.string.quantity) + ": " + numberOrder;
+        orderMessage = orderMessage + "\n" + getString(R.string.total) + ": $" + price;
+        orderMessage = orderMessage + "\n" + getString(R.string.thank_you);
 
-        composeEmail("Just Java Order For "+ name, orderMessage);
+        composeEmail(getString(R.string.order_summary_email_subject, name), orderMessage);
     }
 
     private void composeEmail(String subject, String content) {

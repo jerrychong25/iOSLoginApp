@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
-            android:text="Name" />
+            android:text="@string/name" />
 
         <EditText
             android:id="@+id/edit_text_name"
@@ -25,7 +25,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:hint="Enter name here"
+            android:hint="@string/enter_name_here"
             android:inputType="textCapWords"/>
 
         <TextView
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="15dp"
-            android:text="Toppings" />
+            android:text="@string/toppings" />
 
         <CheckBox
             android:id="@+id/checkbox_whipped_cream"
@@ -43,7 +43,7 @@
             android:layout_marginLeft="15dp"
             android:onClick="onCheckboxClicked"
             android:paddingLeft="24dp"
-            android:text="Whipped Cream"
+            android:text="@string/whipped_cream"
             android:textSize="16sp" />/>
 
         <CheckBox
@@ -54,7 +54,7 @@
             android:layout_marginLeft="15dp"
             android:onClick="onCheckboxClicked"
             android:paddingLeft="24dp"
-            android:text="Chocolate"
+            android:text="@string/chocolate"
             android:textSize="16sp" />/>
 
         <TextView
@@ -63,7 +63,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="8dp"
-            android:text="Quantity" />
+            android:text="@string/quantity" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="15dp"
             android:onClick="submitOrder"
-            android:text="Order" />
+            android:text="@string/order" />
 
     </LinearLayout>
 
