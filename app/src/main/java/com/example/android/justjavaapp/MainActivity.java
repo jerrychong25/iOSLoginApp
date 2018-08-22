@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.android.justjavaapp.R;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     int quantity = 2;
     boolean isWhippedCream = false;
+    boolean isChocolate = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
                     isWhippedCream = false;
                 }
                 break;
+            case R.id.checkbox_chocolate:
+                if (checked)
+                {
+                    isChocolate = true;
+                }
+                else
+                {
+                    isChocolate = false;
+                }
+                break;
         }
     }
 
@@ -61,7 +73,12 @@ public class MainActivity extends AppCompatActivity {
     private void createOrderSummary(int numberOrder) {
         int price = calculatePrice(numberOrder);
         String orderMessage = "";
-        orderMessage = "Name: " + "Jerry Chong";
+
+        EditText etname = (EditText) findViewById(R.id.edit_text_name);
+        String name = etname.getText().toString();
+
+        orderMessage = "Name: " + name;
+
         if(isWhippedCream == true)
         {
             orderMessage = orderMessage + "\nAdd Whipped Cream: Yes";
@@ -70,6 +87,16 @@ public class MainActivity extends AppCompatActivity {
         {
             orderMessage = orderMessage + "\nAdd Whipped Cream: No";
         }
+
+        if(isChocolate == true)
+        {
+            orderMessage = orderMessage + "\nAdd Chocolate: Yes";
+        }
+        else if(isChocolate == false)
+        {
+            orderMessage = orderMessage + "\nAdd Chocolate: No";
+        }
+
         orderMessage = orderMessage + "\nQuantity: " + numberOrder;
         orderMessage = orderMessage + "\nTotal: $" + price;
         orderMessage = orderMessage + "\nThank you!";
