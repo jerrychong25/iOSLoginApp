@@ -35,19 +35,6 @@ class LoginViewController: UIViewController {
 //        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
 //        self.present(alert, animated: true, completion: nil)
         
-//        let webView = WebViewController(nibName: "WebViewController", bundle: nil)
-//        self.navigationController?.pushViewController(webView, animated: true)
-
-        // Test Working 1
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "LoginScreen", bundle: nil)
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "webView") as! WebViewController
-//        self.present(nextViewController, animated:true, completion:nil)
-        
-        // Test Working 2
-//        let webVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "webView") as! WebViewController
-////        self.navigationController?.pushViewController(vc!, animated: true)
-//        self.present(webVC, animated: true)
-        
         // Test 3
         performSegue(withIdentifier: "webView", sender: self)
     }
