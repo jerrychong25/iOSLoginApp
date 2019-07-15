@@ -6,16 +6,6 @@ target 'LoginScreen' do
   use_frameworks!
 
   # Pods for LoginScreen
-  # pod 'FacebookCore', '~> 0.5.0'
-  # pod 'FacebookLogin', '~> 0.5.0'
-  # pod 'FacebookShare', '~> 0.5.0'
-  pod 'FacebookCore'
-  pod 'FacebookLogin'
-  pod 'FacebookShare'
-
   pod 'AFNetworking'
-
-  pod 'TwitterKit'
-  pod 'TwitterCore'
 
 end

@@ -17,7 +17,6 @@
 		177586D21E2C0B1F0031F41A /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586D11E2C0B1F0031F41A /* LoginButton.swift */; };
 		177586D41E2C0B360031F41A /* FacebookLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586D31E2C0B360031F41A /* FacebookLoginButton.swift */; };
 		177586D61E2C0B470031F41A /* TwitterLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586D51E2C0B470031F41A /* TwitterLoginButton.swift */; };
-		177586D91E2C2D320031F41A /* FacebookAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586D81E2C2D320031F41A /* FacebookAPIManager.swift */; };
 		177586DB1E2C2D730031F41A /* FacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586DA1E2C2D730031F41A /* FacebookUser.swift */; };
 		177586DD1E2C2D7F0031F41A /* FacebookPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586DC1E2C2D7F0031F41A /* FacebookPost.swift */; };
 		177586DF1E2C2DCF0031F41A /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586DE1E2C2DCF0031F41A /* NetworkingManager.swift */; };
@@ -38,7 +37,6 @@
 		177586D11E2C0B1F0031F41A /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		177586D31E2C0B360031F41A /* FacebookLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginButton.swift; sourceTree = "<group>"; };
 		177586D51E2C0B470031F41A /* TwitterLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLoginButton.swift; sourceTree = "<group>"; };
-		177586D81E2C2D320031F41A /* FacebookAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPIManager.swift; sourceTree = "<group>"; };
 		177586DA1E2C2D730031F41A /* FacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUser.swift; sourceTree = "<group>"; };
 		177586DC1E2C2D7F0031F41A /* FacebookPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookPost.swift; sourceTree = "<group>"; };
 		177586DE1E2C2DCF0031F41A /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 		177586D71E2C2D0D0031F41A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				177586D81E2C2D320031F41A /* FacebookAPIManager.swift */,
 				177586DE1E2C2DCF0031F41A /* NetworkingManager.swift */,
 			);
 			path = Controllers;
@@ -162,7 +159,6 @@
 				177586B21E2C00A20031F41A /* Frameworks */,
 				177586B31E2C00A20031F41A /* Resources */,
 				5839CC6F030D87EC12993666 /* [CP] Embed Pods Frameworks */,
-				F0D5D6DEAA2DC50741A23BE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,28 +227,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
-				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -277,24 +255,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F0D5D6DEAA2DC50741A23BE4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-resources.sh",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,7 +264,6 @@
 			files = (
 				177586D01E2C02270031F41A /* LoginViewController.swift in Sources */,
 				177586DD1E2C2D7F0031F41A /* FacebookPost.swift in Sources */,
-				177586D91E2C2D320031F41A /* FacebookAPIManager.swift in Sources */,
 				177586DF1E2C2DCF0031F41A /* NetworkingManager.swift in Sources */,
 				177586D41E2C0B360031F41A /* FacebookLoginButton.swift in Sources */,
 				177586D21E2C0B1F0031F41A /* LoginButton.swift in Sources */,

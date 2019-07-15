@@ -6,10 +6,6 @@
 //  Copyright © 2017 iOS App Templates. All rights reserved.
 //
 
-import FacebookCore
-import FacebookLogin
-import FacebookShare
-import TwitterKit
 import UIKit
 
 @UIApplicationMain
@@ -17,17 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        TWTRTwitter.sharedInstance().start(withConsumerKey:"9p0SO3sGDAhHu7uz5g9BF9on0", consumerSecret:"7ozjHdTpgY3Szejy0R1rYZtFeIjMB50krpbba7b5ShVawlSxeP")
-        return SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-    }
-
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        if url.absoluteString.starts(with: "twitter") {
-            return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
-        }
-        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
-    }
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        return SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+//    }
+//
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
