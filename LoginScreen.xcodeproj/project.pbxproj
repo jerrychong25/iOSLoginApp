@@ -185,7 +185,6 @@
 				TargetAttributes = {
 					177586B41E2C00A20031F41A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = L693HRC9HY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -230,7 +229,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -257,7 +256,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A54275F5E87AA1C12B33AF58 /* [CP] Check Pods Manifest.lock */ = {
@@ -284,7 +283,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-resources.sh",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -293,7 +292,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginScreen/Pods-LoginScreen-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -440,7 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L693HRC9HY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LoginScreen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOSAppTemplatesCom.LoginScreen;
@@ -455,7 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L693HRC9HY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LoginScreen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOSAppTemplatesCom.LoginScreen;

@@ -31,52 +31,52 @@ class LoginViewController: UIViewController {
         didLogin(method: "email and password", info: "Email: \(email) \n Password: \(pass)")
     }
 
-    @IBAction func didTapFacebookLoginButton(_ sender: FacebookLoginButton) {
-        // Facebook login attempt
-        let loginManager = LoginManager()
-        loginManager.logIn(readPermissions: readPermissions, viewController: self, completion: didReceiveFacebookLoginResult)
-    }
+//    @IBAction func didTapFacebookLoginButton(_ sender: FacebookLoginButton) {
+//        // Facebook login attempt
+//        let loginManager = LoginManager()
+//        loginManager.logIn(readPermissions: readPermissions, viewController: self, completion: didReceiveFacebookLoginResult)
+//    }
 
-    @IBAction func didTapTwitterLoginButton(_ sender: TwitterLoginButton) {
-        // Twitter login attempt
-        TWTRTwitter.sharedInstance().logIn(completion: { session, error in
-            if let session = session {
-                // Successful log in with Twitter
-                print("signed in as \(session.userName)");
-                let info = "Username: \(session.userName) \n User ID: \(session.userID)"
-                self.didLogin(method: "Twitter", info: info)
-            } else {
-                print("error: \(error?.localizedDescription)");
-            }
-        })
-    }
+//    @IBAction func didTapTwitterLoginButton(_ sender: TwitterLoginButton) {
+//        // Twitter login attempt
+//        TWTRTwitter.sharedInstance().logIn(completion: { session, error in
+//            if let session = session {
+//                // Successful log in with Twitter
+//                print("signed in as \(session.userName)");
+//                let info = "Username: \(session.userName) \n User ID: \(session.userID)"
+//                self.didLogin(method: "Twitter", info: info)
+//            } else {
+//                print("error: \(error?.localizedDescription)");
+//            }
+//        })
+//    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
 
-    private func didReceiveFacebookLoginResult(loginResult: LoginResult) {
-        switch loginResult {
-        case .success:
-            didLoginWithFacebook()
-        case .failed(_): break
-        default: break
-        }
-    }
+//    private func didReceiveFacebookLoginResult(loginResult: LoginResult) {
+//        switch loginResult {
+//        case .success:
+//            didLoginWithFacebook()
+//        case .failed(_): break
+//        default: break
+//        }
+//    }
 
-    private func didLoginWithFacebook() {
-        // Successful log in with Facebook
-        if let accessToken = AccessToken.current {
-            let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
-            facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
-                if let _ = facebookUser.email {
-                    let info = "First name: \(facebookUser.firstName!) \n Last name: \(facebookUser.lastName!) \n Email: \(facebookUser.email!)"
-                    self.didLogin(method: "Facebook", info: info)
-                }
-            })
-        }
-    }
+//    private func didLoginWithFacebook() {
+//        // Successful log in with Facebook
+//        if let accessToken = AccessToken.current {
+//            let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
+//            facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
+//                if let _ = facebookUser.email {
+//                    let info = "First name: \(facebookUser.firstName!) \n Last name: \(facebookUser.lastName!) \n Email: \(facebookUser.email!)"
+//                    self.didLogin(method: "Facebook", info: info)
+//                }
+//            })
+//        }
+//    }
 
     private func didLogin(method: String, info: String) {
         let message = "Successfully logged in with \(method). " + info
