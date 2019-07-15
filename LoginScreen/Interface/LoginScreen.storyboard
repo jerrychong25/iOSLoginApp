@@ -25,40 +25,40 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-aT-149" userLabel="LoginFormContainerView">
-                                <rect key="frame" x="36" y="383" width="304" height="133.5"/>
+                                <rect key="frame" x="36" y="383" width="304" height="140"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-qs-nyA" userLabel="Username Text Field" customClass="LoginTextField" customModule="LoginScreen" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="20" width="264" height="30"/>
+                                        <rect key="frame" x="20" y="20" width="264" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="oj2-Q0-RGU"/>
+                                            <constraint firstAttribute="height" constant="35" id="oj2-Q0-RGU"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKT-fJ-vfo" userLabel="Password Text Field" customClass="LoginTextField" customModule="LoginScreen" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="57" width="264" height="30"/>
+                                        <rect key="frame" x="20" y="62" width="264" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="a81-Ip-sSE"/>
+                                            <constraint firstAttribute="height" constant="35" id="a81-Ip-sSE"/>
                                         </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeK-9E-LJ2" customClass="LoginButton" customModule="LoginScreen" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="101" width="264" height="30"/>
+                                        <rect key="frame" x="20" y="111" width="264" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="YtO-3O-7QX"/>
                                         </constraints>
@@ -73,7 +73,7 @@
                                     <constraint firstItem="gtV-qs-nyA" firstAttribute="leading" secondItem="rS5-aT-149" secondAttribute="leading" constant="20" id="052-bL-JQB" userLabel="Username Text Field.leading = leading + 40"/>
                                     <constraint firstItem="DKT-fJ-vfo" firstAttribute="leading" secondItem="rS5-aT-149" secondAttribute="leading" constant="20" id="5Ze-FS-Xfp"/>
                                     <constraint firstItem="gtV-qs-nyA" firstAttribute="top" secondItem="rS5-aT-149" secondAttribute="top" constant="20" id="G1G-zw-3Yg"/>
-                                    <constraint firstAttribute="height" constant="133.5" id="Q5X-zm-VSN"/>
+                                    <constraint firstAttribute="height" constant="140" id="Q5X-zm-VSN"/>
                                     <constraint firstItem="PeK-9E-LJ2" firstAttribute="centerX" secondItem="rS5-aT-149" secondAttribute="centerX" id="UL5-dI-KjY"/>
                                     <constraint firstItem="DKT-fJ-vfo" firstAttribute="top" secondItem="gtV-qs-nyA" secondAttribute="bottom" constant="7" id="ULl-oa-zZk"/>
                                     <constraint firstAttribute="trailing" secondItem="gtV-qs-nyA" secondAttribute="trailing" constant="20" id="lWY-nc-sTU"/>
@@ -82,15 +82,8 @@
                                     <constraint firstItem="PeK-9E-LJ2" firstAttribute="width" secondItem="DKT-fJ-vfo" secondAttribute="width" id="zM9-oE-sHz"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRp-P8-73M" userLabel="SocialButtonsContainerView">
-                                <rect key="frame" x="87.5" y="321" width="200" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="P48-wi-VeQ" userLabel="width = 140"/>
-                                    <constraint firstAttribute="height" constant="64" id="uDy-XK-alW"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-xu-6Uy" userLabel="ConectWithLabel">
-                                <rect key="frame" x="0.0" y="542.5" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="538" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="eNd-ef-jrk"/>
                                 </constraints>
@@ -115,7 +108,7 @@
                             <constraint firstItem="fwU-xu-6Uy" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="DwO-ap-QdQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rS5-aT-149" secondAttribute="trailing" constant="19" id="F5x-dY-hHQ"/>
                             <constraint firstItem="cja-Kd-yj9" firstAttribute="height" secondItem="4CQ-lm-TvN" secondAttribute="height" id="Lc8-xc-ray"/>
-                            <constraint firstItem="fwU-xu-6Uy" firstAttribute="top" secondItem="rS5-aT-149" secondAttribute="bottom" multiplier="1.05" id="S7r-BK-FwG"/>
+                            <constraint firstItem="fwU-xu-6Uy" firstAttribute="top" secondItem="rS5-aT-149" secondAttribute="bottom" constant="15" id="S7r-BK-FwG"/>
                             <constraint firstItem="cja-Kd-yj9" firstAttribute="width" secondItem="4CQ-lm-TvN" secondAttribute="width" id="VGd-88-sK2"/>
                             <constraint firstItem="fwU-xu-6Uy" firstAttribute="width" secondItem="4CQ-lm-TvN" secondAttribute="width" id="Z5X-CH-d3T"/>
                             <constraint firstItem="OIg-Zq-ngy" firstAttribute="top" secondItem="NSY-h8-A2N" secondAttribute="bottom" multiplier="4" constant="100" id="krr-JJ-AO7"/>
