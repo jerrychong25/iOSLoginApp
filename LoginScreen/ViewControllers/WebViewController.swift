@@ -18,11 +18,6 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         webView.navigationDelegate = self
         view = webView
     }
-
-//    override func loadView() {
-//        webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
-//        self.view = webView
-//    }
     
     @IBOutlet weak var alertButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -31,16 +26,11 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         
         NSLog("WebViewController() viewDidLoad() Start");
         
-//        let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
-//        self.view.addSubview(webView)
-        
 //        customizeNavBar()
 
         // Do any additional setup after loading the view.
         let url = URL(string: "http://www.apple.com/")!
         webView.load(URLRequest(url: url))
-
-//        webView.load(URLRequest(url: URL(string: "http://www.apple.com/")!))
         
         NSLog("WebViewController() viewDidLoad() End");
     }
