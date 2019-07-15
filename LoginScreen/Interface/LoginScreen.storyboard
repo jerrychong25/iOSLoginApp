@@ -122,11 +122,30 @@
                     <connections>
                         <outlet property="passwordTextField" destination="DKT-fJ-vfo" id="ezW-De-G8L"/>
                         <outlet property="usernameTextField" destination="gtV-qs-nyA" id="EKB-iH-eFK"/>
+                        <segue destination="zIU-dg-mSt" kind="show" identifier="webView" id="BUG-DI-RQk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCI-rr-jRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100" y="135.38230884557723"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ebn-cJ-Nos">
+            <objects>
+                <viewController id="zIU-dg-mSt" customClass="WebViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sGF-9y-ahB"/>
+                        <viewControllerLayoutGuide type="bottom" id="oD9-9H-1qr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mvr-qr-TNU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nl7-Tw-UNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="135"/>
         </scene>
     </scenes>
     <resources>
