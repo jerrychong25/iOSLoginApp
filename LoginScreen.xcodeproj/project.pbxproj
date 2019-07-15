@@ -21,6 +21,7 @@
 		177586DD1E2C2D7F0031F41A /* FacebookPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586DC1E2C2D7F0031F41A /* FacebookPost.swift */; };
 		177586DF1E2C2DCF0031F41A /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586DE1E2C2DCF0031F41A /* NetworkingManager.swift */; };
 		177586E61E2D76E20031F41A /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177586E51E2D76E20031F41A /* LoginTextField.swift */; };
+		34B4182122DC23A900BE806F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4182022DC23A900BE806F /* WebViewController.swift */; };
 		78374F4625A02DEE8E0C389C /* Pods_LoginScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765C4532F4A869C4E34DD88C /* Pods_LoginScreen.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		177586DC1E2C2D7F0031F41A /* FacebookPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookPost.swift; sourceTree = "<group>"; };
 		177586DE1E2C2DCF0031F41A /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		177586E51E2D76E20031F41A /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		34B4182022DC23A900BE806F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		765C4532F4A869C4E34DD88C /* Pods_LoginScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBE4766B40AB4C53556DA02 /* Pods-LoginScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen/Pods-LoginScreen.debug.xcconfig"; sourceTree = "<group>"; };
 		FA344B2888E22A5E7B1DB02C /* Pods-LoginScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen/Pods-LoginScreen.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				177586CF1E2C02270031F41A /* LoginViewController.swift */,
+				34B4182022DC23A900BE806F /* WebViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				177586D01E2C02270031F41A /* LoginViewController.swift in Sources */,
+				34B4182122DC23A900BE806F /* WebViewController.swift in Sources */,
 				177586DD1E2C2D7F0031F41A /* FacebookPost.swift in Sources */,
 				177586DF1E2C2DCF0031F41A /* NetworkingManager.swift in Sources */,
 				177586D41E2C0B360031F41A /* FacebookLoginButton.swift in Sources */,
@@ -401,7 +405,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LoginScreen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iOSAppTemplatesCom.LoginScreen;
+				PRODUCT_BUNDLE_IDENTIFIER = example.LoginScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -416,7 +420,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LoginScreen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iOSAppTemplatesCom.LoginScreen;
+				PRODUCT_BUNDLE_IDENTIFIER = example.LoginScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
