@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
 
     @IBAction func didTapLoginButton(_ sender: LoginButton) {
+        NSLog("LoginViewController didTapLoginButton()")
+        
         // Regular login attempt. Add the code to handle the login by email and password.
         guard let email = emailTextField.text, let pass = passwordTextField.text else {
             // It should never get here
@@ -24,16 +26,22 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapRegisterButton(_ sender: RegisterButton) {
+        NSLog("LoginViewController didTapRegisterButton()")
+        
         // Regular register attempt. Add the code to handle the register by full name, email and password.
         didRegister()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        NSLog("LoginViewController touchesBegan()")
+        
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
 
     private func didLogin(method: String, info: String) {
+        NSLog("LoginViewController didLogin()")
+        
 ////        let message = "Successfully logged in with \(method). \n" + info
 //        let message = info
 //        let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertController.Style.alert)
@@ -44,6 +52,8 @@ class LoginViewController: UIViewController {
     }
     
     private func didRegister() {
+        NSLog("LoginViewController didRegister()")
+        
         performSegue(withIdentifier: "register", sender: self)
     }
 }

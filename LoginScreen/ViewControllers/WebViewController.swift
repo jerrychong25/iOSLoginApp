@@ -14,6 +14,8 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     
     override func loadView() {
+        NSLog("WebViewController loadView()")
+        
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
@@ -24,15 +26,13 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSLog("WebViewController() viewDidLoad() Start");
+        NSLog("WebViewController viewDidLoad()")
         
 //        customizeNavBar()
 
         // Do any additional setup after loading the view.
         let url = URL(string: "http://www.apple.com/")!
         webView.load(URLRequest(url: url))
-        
-        NSLog("WebViewController() viewDidLoad() End");
     }
     
 //    func customizeNavBar() {
