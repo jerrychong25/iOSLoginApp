@@ -25,5 +25,4 @@ class LoginButton: UIButton {
         self.tintColor = kLoginButtonTintColor
         self.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
     }
-
 }
