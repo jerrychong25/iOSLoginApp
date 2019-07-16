@@ -17,6 +17,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet var confirmpasswordTextField: UITextField!
     
     @IBAction func didTapRegisterButton(_ sender: RegisterButton) {
+        NSLog("RegisterViewController didTapRegisterButton()")
+        
         // Regular login attempt. Add the code to handle the login by email and password.
         guard let full_name = fullnameTextField, let email = emailTextField.text, let password = passwordTextField.text, let confirm_password = confirmpasswordTextField else {
             // It should never get here
@@ -26,6 +28,8 @@ class RegisterViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        NSLog("RegisterViewController touchesBegan()")
+        
         fullnameTextField.resignFirstResponder()
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
@@ -33,6 +37,8 @@ class RegisterViewController: UIViewController {
     }
     
     private func didRegister(info: String) {
+        NSLog("RegisterViewController didRegister()")
+        
         let message = info
         let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
