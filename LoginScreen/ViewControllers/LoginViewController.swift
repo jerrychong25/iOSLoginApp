@@ -10,10 +10,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var forgotpasswordLabel: UILabel!
 
+    override func viewDidLoad() {
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.tapFunction))
+        forgotpasswordLabel.isUserInteractionEnabled = true
+        forgotpasswordLabel.addGestureRecognizer(tap)
+    }
+    
     @IBAction func didTapLoginButton(_ sender: LoginButton) {
         NSLog("LoginViewController didTapLoginButton()")
         
@@ -32,9 +39,16 @@ class LoginViewController: UIViewController {
         didRegister()
     }
 
+    @IBAction func tapFunction(_ sender: UITapGestureRecognizer) {
+        NSLog("LoginViewController Label Clicked!")
+        
+        // Switch To Register Page
+        performSegue(withIdentifier: "register", sender: self)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         NSLog("LoginViewController touchesBegan()")
-        
+
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
@@ -48,12 +62,14 @@ class LoginViewController: UIViewController {
 //        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
 //        self.present(alert, animated: true, completion: nil)
         
+        // Switch To Web Page
         performSegue(withIdentifier: "webView", sender: self)
     }
     
     private func didRegister() {
         NSLog("LoginViewController didRegister()")
         
+        // Switch To Register Page
         performSegue(withIdentifier: "register", sender: self)
     }
 }

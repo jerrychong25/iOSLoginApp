@@ -136,6 +136,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="gtV-qs-nyA" id="nbl-mO-dzC"/>
+                        <outlet property="forgotpasswordLabel" destination="fwU-xu-6Uy" id="Sad-Ur-YcK"/>
                         <outlet property="passwordTextField" destination="DKT-fJ-vfo" id="ezW-De-G8L"/>
                         <segue destination="zIU-dg-mSt" kind="show" identifier="webView" id="BUG-DI-RQk"/>
                         <segue destination="M5v-cp-dmt" kind="show" identifier="register" id="ixV-nf-nDO"/>
