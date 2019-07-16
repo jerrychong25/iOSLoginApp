@@ -196,7 +196,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itf-N3-Noa" userLabel="Email Text Field" customClass="RegisterTextField" customModule="LoginScreen" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itf-N3-Noa" userLabel="Email Text Field" customClass="RegisterTextField" customModule="LoginScreen" customModuleProvider="target">
                                         <rect key="frame" x="20" y="68" width="264" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -211,7 +211,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rif-35-uei" userLabel="Password Text Field" customClass="RegisterTextField" customModule="LoginScreen" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rif-35-uei" userLabel="Password Text Field" customClass="RegisterTextField" customModule="LoginScreen" customModuleProvider="target">
                                         <rect key="frame" x="20" y="116" width="264" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -254,16 +254,22 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Rif-35-uei" firstAttribute="height" secondItem="itf-N3-Noa" secondAttribute="height" id="1C8-J8-GzO"/>
                                     <constraint firstItem="H3y-I3-Phd" firstAttribute="top" secondItem="1Yv-iz-yTF" secondAttribute="top" constant="20" id="5WT-Yg-gPg"/>
                                     <constraint firstAttribute="trailing" secondItem="H3y-I3-Phd" secondAttribute="trailing" constant="20" id="6pY-Kp-EQE"/>
                                     <constraint firstAttribute="trailing" secondItem="lpw-h8-2d1" secondAttribute="trailing" constant="20" id="8I0-Il-10e"/>
                                     <constraint firstItem="H3y-I3-Phd" firstAttribute="leading" secondItem="1Yv-iz-yTF" secondAttribute="leading" constant="20" id="9Cc-Yu-B7o" userLabel="Username Text Field.leading = leading + 40"/>
+                                    <constraint firstItem="itf-N3-Noa" firstAttribute="width" secondItem="H3y-I3-Phd" secondAttribute="width" id="BSa-9S-7wL"/>
                                     <constraint firstItem="M4J-Wb-xbx" firstAttribute="centerX" secondItem="1Yv-iz-yTF" secondAttribute="centerX" id="FVm-N6-j7R"/>
+                                    <constraint firstItem="itf-N3-Noa" firstAttribute="height" secondItem="H3y-I3-Phd" secondAttribute="height" id="Odt-r6-Bop"/>
                                     <constraint firstAttribute="height" constant="300" id="PMV-3V-H0P"/>
                                     <constraint firstItem="Rif-35-uei" firstAttribute="top" secondItem="itf-N3-Noa" secondAttribute="bottom" constant="13" id="R4u-Yi-JgS"/>
                                     <constraint firstItem="lpw-h8-2d1" firstAttribute="leading" secondItem="1Yv-iz-yTF" secondAttribute="leading" constant="20" id="RXM-qr-8mo"/>
+                                    <constraint firstItem="Rif-35-uei" firstAttribute="centerX" secondItem="itf-N3-Noa" secondAttribute="centerX" id="UDs-uA-i3t"/>
+                                    <constraint firstItem="itf-N3-Noa" firstAttribute="centerX" secondItem="H3y-I3-Phd" secondAttribute="centerX" id="bYW-XH-M3z"/>
                                     <constraint firstItem="lpw-h8-2d1" firstAttribute="top" secondItem="Rif-35-uei" secondAttribute="bottom" constant="13" id="fez-aM-i2T"/>
                                     <constraint firstItem="itf-N3-Noa" firstAttribute="top" secondItem="H3y-I3-Phd" secondAttribute="bottom" constant="13" id="ihd-CE-InO"/>
+                                    <constraint firstItem="Rif-35-uei" firstAttribute="width" secondItem="itf-N3-Noa" secondAttribute="width" id="kYt-Av-mWo"/>
                                     <constraint firstItem="M4J-Wb-xbx" firstAttribute="top" secondItem="lpw-h8-2d1" secondAttribute="bottom" constant="14" id="tVk-2A-C5D"/>
                                     <constraint firstItem="M4J-Wb-xbx" firstAttribute="width" secondItem="lpw-h8-2d1" secondAttribute="width" id="yQC-Af-bZS"/>
                                 </constraints>
