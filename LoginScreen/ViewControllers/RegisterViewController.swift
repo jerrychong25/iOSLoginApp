@@ -10,7 +10,6 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    
     @IBOutlet var fullnameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -20,10 +19,16 @@ class RegisterViewController: UIViewController {
         NSLog("RegisterViewController didTapRegisterButton()")
         
         // Regular login attempt. Add the code to handle the login by email and password.
-        guard let full_name = fullnameTextField, let email = emailTextField.text, let password = passwordTextField.text, let confirm_password = confirmpasswordTextField else {
+        guard let full_name = fullnameTextField.text, let email = emailTextField.text, let password = passwordTextField.text, let confirm_password = confirmpasswordTextField.text else {
             // It should never get here
             return
         }
+        
+        NSLog("RegisterViewController full_name: " + full_name)
+        NSLog("RegisterViewController email: " + email)
+        NSLog("RegisterViewController password: " + password)
+        NSLog("RegisterViewController confirm_password: " + confirm_password)
+        
         didRegister(info: "\n Full Name: \(full_name) \n Email: \(email) \n Password: \(password) \n Confirm Password: \(confirm_password)")
     }
     

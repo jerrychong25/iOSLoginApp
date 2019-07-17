@@ -220,7 +220,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -250,7 +250,7 @@
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <state key="normal" title="Register"/>
                                         <connections>
-                                            <action selector="didTapLoginButton:" destination="M5v-cp-dmt" eventType="touchUpInside" id="61h-Fa-xm9"/>
+                                            <action selector="didTapRegisterButton:" destination="M5v-cp-dmt" eventType="touchUpInside" id="5Cx-bO-EOh"/>
                                         </connections>
                                     </button>
                                 </subviews>
