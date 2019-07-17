@@ -25,11 +25,15 @@ class LoginViewController: UIViewController {
         NSLog("LoginViewController didTapLoginButton()")
         
         // Regular login attempt. Add the code to handle the login by email and password.
-        guard let email = emailTextField.text, let pass = passwordTextField.text else {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
             // It should never get here
             return
         }
-        didLogin(method: "email and password", info: "\nEmail: \(email) \n Password: \(pass)")
+        
+        NSLog("LoginViewController email: " + email)
+        NSLog("LoginViewController password: " + password)
+        
+        didLogin(method: "email and password", info: "\nEmail: \(email) \n Password: \(password)")
     }
     
     @IBAction func didTapRegisterButton(_ sender: RegisterButton) {
@@ -56,14 +60,14 @@ class LoginViewController: UIViewController {
     private func didLogin(method: String, info: String) {
         NSLog("LoginViewController didLogin()")
         
-////        let message = "Successfully logged in with \(method). \n" + info
-//        let message = info
-//        let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertController.Style.alert)
-//        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
+//        let message = "Successfully logged in with \(method). \n" + info
+        let message = info
+        let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         
-        // Switch To Web Page
-        performSegue(withIdentifier: "webView", sender: self)
+//        // Switch To Web Page
+//        performSegue(withIdentifier: "webView", sender: self)
     }
     
     private func didRegister() {
